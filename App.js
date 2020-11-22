@@ -39,7 +39,7 @@ export default function App() {
                                           return {...message, createdAt: message.createdAt.toDate()}
 
                                         } ).sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
-          setMessages(messagesFirestore)  
+          appendMessages(messagesFirestore)  
       })
       return () => unsubcribe()
   }, [])
